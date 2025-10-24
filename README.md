@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+Recipe Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application to search for recipes by ingredients with a dark/light mode toggle. It fetches recipes from the Spoonacular API and displays them in a responsive grid with detailed recipe information.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+Search recipes by entering one or more ingredients (comma-separated)
 
-### `npm start`
+Responsive grid layout for recipe cards
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Light and dark theme toggle with persisted preference
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Click on a recipe to see details: ingredients, instructions, servings, ready time
 
-### `npm test`
+API integration using Axios and Spoonacular API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📸 Screenshot
 
-### `npm run build`
+![Recipe Finder Screenshot](public/recipefinder.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+💻 Getting Started
+Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Node.js installed (v16 or newer recommended)
 
-### `npm run eject`
+Spoonacular API key (Sign up here
+)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone https://github.com/yourusername/recipe-finder.git
+cd recipe-finder
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Create a .env.local file in the project root and add your API key:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+REACT_APP_SPOONACULAR_KEY=your_api_key_here
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Start the development server:
 
-### Making a Progressive Web App
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+The app should open automatically at http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+⚡ Usage
 
-### Deployment
+Enter ingredients in the search bar (e.g., chicken, tomato).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Click Search or press Enter.
 
-### `npm run build` fails to minify
+Browse the recipe cards in the grid.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Click a card to view detailed recipe information in a modal.
+
+Toggle between light and dark themes using the top-right button.
+
+🛠 Tech Stack
+
+React for building the UI
+
+Axios for API requests
+
+React Icons for theme toggle icons
+
+CSS for styling and responsive design
+
+📁 Project Structure
+recipe-finder/
+├─ src/
+│  ├─ api.js              # Spoonacular API calls
+│  ├─ components/
+│  │  ├─ RecipeCard.jsx
+│  │  ├─ RecipeModal.jsx
+│  │  └─ ThemeToggle.jsx
+│  ├─ context/
+│  │  └─ ThemeContext.jsx
+│  ├─ pages/
+│  │  └─ Home.jsx
+│  ├─ App.jsx
+│  └─ index.js
+├─ .env.local             # Your API key (ignored by git)
+├─ package.json
+└─ README.md
