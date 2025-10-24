@@ -31,7 +31,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/yourusername/recipe-finder.git
+git clone git@github.com:Gopyab/Recipe-Finder-using-React-and-spoonacular-API.git
 cd recipe-finder
 
 
